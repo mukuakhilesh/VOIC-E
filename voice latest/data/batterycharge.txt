@@ -1,0 +1,38 @@
+                                                                 battery charge using a voltage divider
+
+1.voltage divider circuit using resistors of 100 k-ohm and 10 k-ohm.
+
+2.5v or 3.3v  microcontroller
+
+the battery we use for our solar-electric car is 48 volts li-ion battery.
+It is useful for the drivers to have a knowledge of the charge remaining 
+in the battery. This is done by reading the voltage through the input of
+ micro-controller. since the micro-controllers can not work on a voltage
+ as high as 48 volts, so we have converted 48 volts to 4.8 volts
+ equivalent using a voltage divider consisting networks of resistors 
+of suitable values.we connect 100-kilo ohm and 10-kilo ohm resistor in 
+series, so the voltage across 10-kilo ohm resistor is 4.8 volt. This 
+
+voltage is supplied to the analog input of the microcontroller. Arduino 
+now will map this value in the range of
+ 0 to 1024.Now,we calculate the input voltage 
+using 4.8/1024 x(given data).Now,terminal voltage is calculated by 
+analog voltage= terminal voltage/110x 10^3x10.
+The resistor used is of high range so that there is not much loss of power. 
+Now, we will be calculating the state of charge using the graph between voltage
+ and state of charge for 48 volts li-ion battery. since the graph between
+ voltage and state of charge(soc) is linear over a long range of 
+graph, we can easily find out the state of charge if the terminal 
+voltage is known. since we know the terminal voltage of the battery 
+and the graph between voltage
+and state of charge is as shown in fig. The slope of the graph is 
+about 0.025 .so, we can calculate the
+state of charge using the voltage/state of charge = 0.025. Now, the 
+data we calculated for the state of charge is displayed on a 16 x 2 size 
+of LCD connected to the micro-controller.
+we are also be using blynk's cloud platform to connect to node MCU through
+ the internet.
+Using the API of blynk we will update it with the percentage of charge left within it.
+we will be able to access it through blynk app on android phone or through the website.
+
+

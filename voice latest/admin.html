@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/css/main.css" />
+  <style>
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #d2e0f3;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: rgb(76, 145, 175);
+  color: white;
+}
+
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 640px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #dff0f3;
+      height: 100%;
+      overflow: scroll;
+    }
+    
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+        
+      }
+      .row.content {height:auto;}
+
+      .topnav input[type=text] {
+       float: right;
+       padding-top: 10px;
+       margin-top: 8px;
+       margin-right: 16px;
+       border: black;
+       font-size: 27px;
+} 
+    }
+  </style>
+</head>
+<body>
+  <div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="checkBox.html">Plan Session</a>  <!--Select participants-->
+    <a href="#contact">Previous Sessions</a>  <!--Downloaded videos-->
+    <a href="#about">Archive</a>              <!--Downloaded chats and queries-->
+    <input style="float: right; height: 44px; text-align: center;"type="text" placeholder="Search..">
+  </div>
+<div class="container-fluid text-center" >    
+  <div class="row content">
+    <div class="col-sm-3 sidenav"style="font-size:100%">
+        <div>
+            <h3>Queries:</h3><hr>
+        </div>
+        
+        <button onclick="screenShare()">ShareScreen</button>
+        <div>
+            <!-- -----------------Query Input BOX-------------------- -->
+
+            <div id = "query_box">
+          
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="col-sm-6 text-left"> 
+      <h1>Welcome</h1>
+      <div id="videos">
+
+        <video id="localVideo" autoplay  playsinline muted></video>
+        <br><br>
+      <!--!!
+      <video id="remoteVideo" autoplay playsinline></video>
+        -->
+      </div>
+      <br>
+      <div>
+        <button id="hangup" style="background-color:lightgray;text-align: center;display: inline-block;border: none" >HangUp</button>
+    </div> 
+
+<br>
+
+
+
+
+
+      <div class="well-sm" style="background-color:rgb(240, 248, 250)">
+          <div id="UploadBox">
+            <p>File Upload</p>
+            <form id="form">
+                <input type="file" style =" border:none ;color: steelblue"id="file" multiple /><br>
+
+                <input type="submit" value="Upload" /><br>
+            </form>
+     </div>
+      </div>
+    </div>         <!---ALERT Motu Isko dekhna bsdk   -->
+    <div class="col-sm-3 sidenav">
+      <div class="well" style="overflow-y:scroll">
+        <div id='onlineUsers'>
+            <h5>Users Online:</h5>
+            <hr>
+            <div id="online"></div>
+           </div>
+      </div>
+      <div class="well" >
+        <p>here will be previous videos</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+  <script src="socket.io-file-client.js"></script>
+  <script src="js/adapter-latest.js"></script>
+  <script src="js/main-admin-new.js"></script>
+  <script src="js/fileUpload.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+html, body, div, img, h1 {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+ 
+body {
+  background: #00838f;
+}
+
+.profile {
+  width: 600px;
+  height: 240px;
+  margin-left: 0px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  font-family: "Muli", sans-serif;
+  color: #e0f7fa;
+}
+
+.profile.connect {
+    
+    margin-right: -200px;
+    position: fixed;
+    margin: auto;
+    font-family: "Muli", sans-serif;
+    color: #e0f7fa;
+  }
+
+
+
+.profile .profile-pic {
+  width: 240px;
+  height: 240px;
+  margin-left: -300px;
+  float: left;
+  border-radius: 50% 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.profile .text-container {
+  width: 360px;
+  margin-left: -100px;
+  padding-top: 68.5714285714px;
+  text-align: center;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.profile h1 {
+  margin-bottom: 34.2857142857px;
+  font-weight: 400;
+  font-size: 2.8em;
+  line-height: 1em;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+.profile .title {
+  font-size: 1.4em;
+  letter-spacing: 1px;
+}
