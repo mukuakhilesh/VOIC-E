@@ -137,10 +137,10 @@
           // Export to the adapter global object visible in the browser.
           adapter.browserShim = edgeShim;
     
-          edgeShim.shimGetUserMedia(window);
-          edgeShim.shimGetDisplayMedia(window);
-          edgeShim.shimPeerConnection(window);
-          edgeShim.shimReplaceTrack(window);
+          // edgeShim.shimGetUserMedia(window);
+          // edgeShim.shimGetDisplayMedia(window);
+          // edgeShim.shimPeerConnection(window);    removing unnecessary data
+          // edgeShim.shimReplaceTrack(window);
     
           // the edge shim implements the full RTCIceCandidate object.
     
@@ -156,13 +156,13 @@
           // Export to the adapter global object visible in the browser.
           adapter.browserShim = safariShim;
     
-          safariShim.shimRTCIceServerUrls(window);
-          safariShim.shimCreateOfferLegacy(window);
-          safariShim.shimCallbacksAPI(window);
-          safariShim.shimLocalStreamsAPI(window);
-          safariShim.shimRemoteStreamsAPI(window);
-          safariShim.shimTrackEventTransceiver(window);
-          safariShim.shimGetUserMedia(window);
+          // safariShim.shimRTCIceServerUrls(window);
+          // safariShim.shimCreateOfferLegacy(window);
+          // safariShim.shimCallbacksAPI(window);
+          // safariShim.shimLocalStreamsAPI(window);     removing unnecessary data
+          // safariShim.shimRemoteStreamsAPI(window);
+          // safariShim.shimTrackEventTransceiver(window);
+          // safariShim.shimGetUserMedia(window);
     
           commonShim.shimRTCIceCandidate(window);
           commonShim.shimMaxMessageSize(window);
