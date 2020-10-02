@@ -18,7 +18,7 @@ const data = {
 
    function logi()
     {
-        $.post("http://192.168.43.92:8081/api/login",
+        $.post("http://localhost:8081/api/login",
         {
             username:document.getElementById("user").value ,
             password:document.getElementById("pass").value ,
@@ -31,7 +31,7 @@ const data = {
  /* var settings = {
         "async": true,
         "crossDomain": true,
-         "url": "http://192.168.43.92:8081/api/login",
+         "url": "http://localhost:8081/api/login",
         "username": document.getElementById("user").value ,
         "password": document.getElementById("pass").value ,
         "method": "POST", 

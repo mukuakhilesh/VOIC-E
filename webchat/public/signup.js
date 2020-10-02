@@ -94,7 +94,7 @@ async function sign()
 
     if(count == 0)
     {    
-      /*  $.post("http://192.168.43.188:8081/api/register",
+      /*  $.post("localhost:8081/api/register",
         {
             username :document.getElementById("username"),
             dept :document.getElementById("dept"),
@@ -106,7 +106,7 @@ async function sign()
           console.log(data);
         });*/
         
-     var data= await fetch("http://192.168.43.188:8081/api/register",
+     var data= await fetch("http://localhost:8081/api/register",
      {
          headers: {
            'Accept': 'application/json',
@@ -128,5 +128,4 @@ async function sign()
     {
         alert("not found");
     }
-        
 }

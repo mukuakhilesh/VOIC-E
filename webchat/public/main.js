@@ -14,17 +14,23 @@ const data = {
       });
     });
  */
+
+
+ 
 var detail;
 function click1(){
     console.log('ready to go');
 
-    window.location.href='http://192.168.43.188:3000/client.html?name='+detail.name;
+    window.location.href='http://localhost:3000/client.html?name='+detail.name;
 }
+
+
+
     function user(){
        
         console.log(localStorage.getItem('x-auth-token'));
         
-        fetch('http://192.168.43.188:8081/api/me', {
+        fetch('http://localhost:8081/api/me', {
             method: "GET", // *GET, POST, PUT, DELETE, etc.
            //mode: "cors", // no-cors, cors, *same-origin
             cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
@@ -72,7 +78,7 @@ function click1(){
 async function logi()
     {
         
-     fetch("http://192.168.43.188:8081/api/login",
+     fetch("http://localhost:8081/api/login",
 {  //mode: "cors",
     credentials: "same-origin",
     headers: {

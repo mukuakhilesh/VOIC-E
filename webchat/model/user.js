@@ -21,7 +21,7 @@ var userSchema = new mongoose.Schema({
     },
     dept:{
         type:String,
-        enum:['dept1','dep2','dept3','dept4'],
+        // enum:['dept1','dep2','dept3','dept4'],
         required:true,
     },
     clientId:{

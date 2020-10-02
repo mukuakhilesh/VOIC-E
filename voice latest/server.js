@@ -178,6 +178,7 @@ function getNumClients(room){
           ///////////////file upload
 
         var count = 0;
+        
 	var uploader = new SocketIOFile(socket, {
 		// uploadDir: {			// multiple directories
 		// 	music: 'data/music',
@@ -200,7 +201,7 @@ function getNumClients(room){
 	uploader.on('complete', (fileInfo) => {
 		console.log('Upload Complete.');
                 console.log(fileInfo);
-                link = "http://192.168.43.188:3000/"+fileInfo.uploadDir;
+                link = "http://localhost:3000/"+fileInfo.uploadDir;
                 //socket.broadcast.emit('fileLink',link);
                 socket.broadcast.emit('fileInfo' ,{
                   user : socket.nickname,
@@ -277,7 +278,7 @@ function search(search,res){
 };
 
 
-http.listen(port,'192.168.43.188',function(){
+http.listen(port,function(){
     console.log("listening to port" + port);
 });
 

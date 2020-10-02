@@ -235,7 +235,7 @@ function gotStream(stream){
     localStream =  stream;
     localVideo.srcObject = stream;
     sendMessage('got user media');
-    startRecording();
+    // startRecording();
 
     console.log("Process of getting local media executed successfully");
 }
@@ -360,8 +360,8 @@ function requestTurn(turnURL) {
    $('#hangup').click(function() {
     console.log('Hanging up.');
     stop();
-    stopRecording();
-    downloadRecordings();
+    // stopRecording();
+    // downloadRecordings();
     sendMessage('bye');
   });
 
@@ -381,7 +381,7 @@ function requestTurn(turnURL) {
 
   
   const mediaSource = new MediaSource();
-  mediaSource.addEventListener('sourceopen', handleSourceOpen, false);
+//   mediaSource.addEventListener('sourceopen', handleSourceOpen, false);  uncomment for video recording
   
   let mediaRecorder;
   let recordedBlobs;
