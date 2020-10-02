@@ -9,6 +9,7 @@ var _ = require('lodash');
 
 router.post('/',async (req,res)=>{
  var a = req.body.password.length;
+ console.log("inside the post route of register route");
   const users =  await User.findOne({username:req.body.username});                //registration for users.
   if(users) return (res.status(400).send('username aleady exists')); 
   if(a<6) return (res.status(400).send('enter the password length of 6'));

@@ -67,8 +67,6 @@ var url=parseQuery(window.location.search);/////////////////////////////////////
 console.log(userName);
 console.log(window.location.search);
 
-
-
 function parseQuery(search) {
 
     var args = search.substring(1).split('&');
@@ -325,6 +323,7 @@ function requestTurn(turnURL) {
   ///////////////////////////////////////turn event ends////////////////
 
 function handleRemoteStreamAdded(event) {
+    var remoteVideo = document.querySelector('#remoteVideo');
     console.log(userName + ': Remote Stream Added');
     remoteStream = event.stream;
     remoteVideo.srcObject = remoteStream;

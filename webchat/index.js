@@ -53,7 +53,7 @@ const port1 = 8080;
 
 //httpServer.listen(port);
 //httpsServer.listen(port1);
-app.listen(port,'192.168.43.188',()=>{
+app.listen(port,()=>{
     console.log(`listening on port ${port} and ip is`+ip.address());
 
 }); 

@@ -17,7 +17,7 @@ for(var i = 0; i < inputs.length; i++){
   obj.push(temp);
 };
 try{
-var res= await fetch("http://192.168.43.188:8081/api/update/connect",
+var res= await fetch("http://localhost:8081/api/update/connect",
 {
     headers: {
       'Accept': 'application/json',
@@ -46,7 +46,7 @@ try{
         content:$('#body').val(),
     }
 
-    var res1= await fetch("http://192.168.43.188:8081/api/email/",
+    var res1= await fetch("http://localhost:8081/api/email/",
     {
         mode: "cors", // no-cors, cors, *same-origin
         cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
@@ -72,7 +72,7 @@ catch(errr){
 
 $(document).ready(()=>{
     
-    fetch('http://192.168.43.188:8081/api/admin/all', {
+    fetch('http://localhost:8081/api/admin/all', {
         method: "GET", // *GET, POST, PUT, DELETE, etc.
         mode: "cors", // no-cors, cors, *same-origin
         cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
@@ -142,7 +142,7 @@ for(var i = 0; i < inputs.length; i++){
 };
 try{
     console.log(obj);
-var res= await fetch("http://192.168.43.188:8081/api/admin/delete",
+var res= await fetch("http://localhost:8081/api/admin/delete",
 {
     headers: {
       'Accept': 'application/json',
@@ -163,5 +163,5 @@ catch(err){
 
 //////////////////////////////////////////////////admin click button
 function click3(){
-    window.location.href='http://192.168.43.188:3000/admin.html';
+    window.location.href='http://localhost:3000/admin.html';
 }
