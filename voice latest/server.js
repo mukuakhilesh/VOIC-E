@@ -13,6 +13,13 @@ var port = process.env.port || 3000;
 app.use(cors());
 app.use(express.static(__dirname));
 
+app.get('/client',(req,res)=>{
+  res.sendFile(__dirname+'/client.html');
+})
+
+app.get('/admin',(req,res)=>{
+  res.sendFile(__dirname+'/admin.html'+ req.query.name);
+})
 
 app.get('/query',(req,res)=>{
   var find= req.query;
