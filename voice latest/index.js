@@ -24,15 +24,7 @@ app.get('/file',(req,res)=>{
 
 
  
-//var search= ' hello';
- 
- //obj.table.push({name:"ashish",date:Date(),text:"this is me"});
- 
- 
- //var json = JSON.stringify(obj);
- //use fs to write the file to disk
- 
- 
+
 //var filepath = 'msg.json';
 
  function append(filepath,query){
@@ -87,8 +79,6 @@ function search(search,res){
   
 };
     
-
-//append(filepath,query);
 app.listen('8080',()=>{
     console.log('listening...');
 })

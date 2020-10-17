@@ -1,5 +1,5 @@
 body {
-  font-family: sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 video {
@@ -11,7 +11,7 @@ video {
   width: 400px;
   height: 650px;
   border-width: 5%;
-  border-color: black;
+  border-color: rgb(189, 35, 35);
   border-style: double;
   float : right;
 
@@ -19,7 +19,7 @@ video {
 
 .queryContainer {
   border: 2px solid #dedede;
-  background-color: #f1f1f1;
+  background-color: #532626;
   border-radius: 5px;
   padding: 10px;
   margin: 10px 0;
