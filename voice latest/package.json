@@ -7,7 +7,7 @@
     "express": "^4.16.4",
     "node-static": "^0.7.10",
     "recordrtc": "^5.5.4",
-    "socket.io": "^2.0.4",
+    "socket.io": "^2.4.0",
     "socket.io-file": "^2.0.3",
     "socket.io-file-client": "^2.0.2"
   }
